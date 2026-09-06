@@ -1,0 +1,289 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
+    border-bottom: 2px solid #ccc;
+}
+
+header h1 {
+    color: #ad45da;
+}
+
+.welcome p {
+    color: #858386;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-around;
+    margin-top: 5px;
+    gap: 20px;
+}
+
+.stat-card {
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    text-align: center;
+    justify-content: space-between;
+    
+}
+
+.stat-card h3 {
+    font-size: 28px;
+    margin: 0;
+    font-weight: 700;
+    color: #aa69c6;
+}
+
+.stat-card p {
+    font-size: 18px;
+    margin: 8px 0 0;
+    color: #42bff47e;
+}
+
+
+.dashboard {
+    margin-top: 20px;
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+.tasks-section {
+    flex: 2;
+}
+
+.timer-section {
+    flex: 1;
+}
+
+.tasks-section {
+    background-color: white;
+    padding: 24px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+}
+
+
+.timer-section {
+    background-color: white;
+    padding: 24px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+}
+
+
+.task-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.task-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+
+.task-input button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#timer {
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.timer-section button {
+    .timer-section button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 4px;
+}
+}
+
+
+#taskList {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+
+#taskList {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+/* ================================
+   DARK MODE
+================================ */
+
+body.dark-mode {
+    background-color: #111827;
+    color: #f9fafb;
+}
+
+body.dark-mode header {
+    background-color: #1f2937;
+    border-color: #374151;
+}
+
+body.dark-mode .stat-card,
+body.dark-mode .tasks-section,
+body.dark-mode .timer-section {
+    background-color: #1f2937;
+    border-color: #374151;
+}
+
+body.dark-mode .welcome p,
+body.dark-mode .stat-card p {
+    color: #9ca3af;
+}
+
+body.dark-mode .task-input input {
+    background-color: #111827;
+    color: #f9fafb;
+    border-color: #374151;
+}
+
+body.dark-mode .task-input input::placeholder {
+    color: #9ca3af;
+}
+
+
+/* Task items */
+
+#taskList li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    padding: 12px 14px;
+    margin-top: 10px;
+
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+#taskList li button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.timer-section h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.timer-section {
+    text-align: center;
+}
+
+
+.timer-section button:hover {
+    transform: translateY(-2px);
+}
+
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 768px) {
+
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .tasks-section,
+    .timer-section {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* ================================
+   TASK INPUT
+================================ */
+
+.task-input {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.task-input input {
+    flex: 1;
+    padding: 12px 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+}
+
+.task-input input:focus {
+    border-color: #6c63ff;
+}
+
+.task-input button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+    .task-input {
+        flex-direction: column;
+    }
+
+    .task-input button {
+        width: 100%;
+    }
+
+
+    /* ================================
+   CARD HOVER EFFECT
+================================ */
+
+.stat-card,
+.tasks-section,
+.timer-section {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover,
+.tasks-section:hover,
+.timer-section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
