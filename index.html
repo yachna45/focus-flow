@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusFlow - Student Productivity Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Focus Flow</h1>
+        <button id="themeBtn">🌚</button>
+        
+
+        </header>
+
+        <main>
+
+            <section class="welcome">   
+                <h2>Good morning! 👋</h2>
+                <p id="date">Saturday, August 15, 2026</p>
+            </section>
+
+            <section class="stats">
+
+                <div class="stat-card">
+                    <h3 id="taskCount">0 / 0</h3>
+                    <p>Tasks Completed</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3 id="focusTime">0 min</h3>
+                    <p>Focus Time</p>
+                </div>
+                <div class="stat-card">
+                    <h3 id="progress">0 min</h3>
+                    <p>Daily Progress</p>
+                </div>
+
+            </section>
+
+            <section class="dashboard">
+
+                <div class="tasks-section">
+                    <h2>Today's Tasks😤</h2>
+                
+
+                <div class="task-input">
+                    <input type="text" id="taskInput" placeholder="What do you need to do?">
+                    <button id="addTaskBtn">Add Task</button>
+                </div>
+
+                <ul id="taskList"></ul>
+            </div>
+            
+            
+            <div class="timer-section"
+>
+                <h2>Focus Timer</h2>
+                <div id="timer">25:00</div>
+                    <button id="startBtn">Start</button>
+                    <button id="resetBtn">Reset</button>
+                </div>
+            </section>
+        </main>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
